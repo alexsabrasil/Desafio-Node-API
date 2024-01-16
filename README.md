@@ -172,6 +172,8 @@ Gestão de Erros e Exceções:
 - Configure um ambiente de desenvolvimento usando ferramentas como nodemon para monitorar alterações no código e reiniciar automaticamente o servidor.
 - Adicione uma configuração centralizada para a conexão com o MongoDB, facilitando possíveis mudanças futuras.
 - Utilize variáveis de ambiente para configurar informações sensíveis, como chaves secretas e senhas.
+- Utilize o postman para testar suas rotas.
+
 
 
 

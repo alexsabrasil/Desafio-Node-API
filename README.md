@@ -19,7 +19,7 @@ O que deve ser feito:
 
 - Nesse projeto você será responsável por criar uma API de login usando recursos do node como o Bcrypt para hash de senhas e o MongoDB como banco de dados.
 
-###### Criar um endpoint para registrar um novo usuário na API.
+#### Criar um endpoint para registrar um novo usuário na API.
 
 Implementar um endpoint para autenticar:
 
@@ -28,52 +28,91 @@ Registro de Novo Usuário
 
 `Endpoint: /register`
 
-##### Método: POST
+#### Método: POST
 Entradas:
-username (String): Nome de usuário do novo usuário.
-password (String): Senha do novo usuário.
-Ações:
+
+Esquema de usuário definido usando Mongoose no seu código
+
+~~~javascript
+const mongoose = require("mongoose");
+
+const UserSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+
+  email: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  location: {
+    type: String,
+    required: true,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+});
+
+const User = mongoose.model("User", UserSchema);
+module.exports = User;
+~~~
+
+#### Ações:
 Hash da senha usando Bcrypt.
 Verificação se o nome de usuário já está em uso.
 Criação de um novo documento de usuário no MongoDB.
-####### Saída:
+
+#### Saída:
+
 Status HTTP 201 (Created) se o registro for bem-sucedido.
 Mensagem indicando sucesso ou falha.
+
 ##### Autenticação de Usuário
 
 `Endpoint: /login`
 
-####### Método: POST
+##### Método: POST
+
 Entradas:
+
 username (String): Nome de usuário do usuário existente.
 password (String): Senha do usuário existente.
 
-##### Ações:
+
+#### Ações:
 
 Verificação se o usuário existe no MongoDB.
 Comparação da senha fornecida com a senha armazenada usando Bcrypt.
 Geração de um token JWT se a autenticação for bem-sucedida.
 
-##### Saída:
+#### Saída:
 
 Status HTTP 200 (OK) com o token JWT se a autenticação for bem-sucedida.
 Status HTTP 401 (Unauthorized) se as credenciais forem inválidas.
 Mensagem indicando sucesso ou falha.
 
-##### Recursos:
+#### Recursos:
 
 Utilize o modelo de usuário fornecido no exemplo.
 Use o Bcrypt para o hash seguro de senhas.
 Implemente estratégias de autenticação do Passport.js para o login.
 
-Observações:
+#### Observações:
 
 Documente seu código adequadamente.
 Implemente medidas de segurança, como tratamento de erros e validação de entrada.
 
-##### Teste seus endpoints usando ferramentas como Postman ou curl.
+#### Teste seus endpoints usando ferramentas como Postman ou curl.
 
-Ao completar esta atividade, você terá construído uma base sólida para a autenticação de usuários em uma API Node.js. Isso incluirá a capacidade de registrar novos usuários com senhas seguras e autenticar usuários existentes gerando tokens JWT para acesso seguro a recursos protegidos.
+Ao completar esta atividade, você terá construído uma base sólida para a autenticação de usuários em uma API Node.js. 
+
 
 ## Objetivos de aprendizagem
   
@@ -120,9 +159,6 @@ Gestão de Erros e Exceções:
 [Testes com JS](https://gabrieluizramos.com.br/anatomia-de-um-teste-em-javascript)
 [Bycript](https://heynode.com/blog/2020-04/salt-and-hash-passwords-bcrypt/)
 [ODM](https://www.freecodecamp.org/portuguese/news/introducao-ao-mongoose-para-mongodb/)
-
-
-
 
 
 

@@ -159,6 +159,7 @@ Gestão de Erros e Exceções:
 [Testes com JS](https://gabrieluizramos.com.br/anatomia-de-um-teste-em-javascript)
 [Bycript](https://heynode.com/blog/2020-04/salt-and-hash-passwords-bcrypt/)
 [ODM](https://www.freecodecamp.org/portuguese/news/introducao-ao-mongoose-para-mongodb/)
+[Postam](https://jera.com.br/blog/5847/desenvolvimento/como-usar-o-postman)
 
 
 

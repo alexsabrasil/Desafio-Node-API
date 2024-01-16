@@ -165,6 +165,13 @@ Gestão de Erros e Exceções:
 ## Dicas
 
 - Certifique-se de estar com a sua maquina configurada de acordo com as aulas vistas anteriormente.
+- Utilize um módulo ou arquivo separado para armazenar configurações como URI do MongoDB, chave secreta para JWT, etc.
+- Organize o projeto em uma estrutura mais modular, separando rotas, modelos, controladores, etc. Isso facilita a escalabilidade e manutenção.
+- Considere refatorar partes do código para torná-lo mais limpo e seguir boas práticas de codificação.
+- Configure um ambiente de desenvolvimento usando ferramentas como nodemon para monitorar alterações no código e reiniciar automaticamente o servidor.
+- Adicione uma configuração centralizada para a conexão com o MongoDB, facilitando possíveis mudanças futuras.
+- Utilize variáveis de ambiente para configurar informações sensíveis, como chaves secretas e senhas.
+
 
 
 
